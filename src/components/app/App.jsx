@@ -1,28 +1,11 @@
-import React, { useState, useEffect } from 'react'
-import { PatientVisualizer } from 'fhir-visualizers'
+import ReadPatient from '../patient/read/ReadPatient'
 
 export default function App (props) {
-  console.debug('App', props)
   const client = props.client
-
-  const [patient, setPatient] = useState(null)
-  useEffect(() => {
-    client
-      .patient.read()
-      .then((patient) => {
-        console.debug('patient', patient)
-        setPatient(patient)
-        // this.forceUpdate() // FIXME XXX
-      })
-  })
-
   return (
     <div>
-      {
-        patient
-          ? <PatientVisualizer patient={patient} />
-          : <h1>Loading</h1>
-      }
+      <h1>My First SMART on FHIR app</h1>
+      <ReadPatient client={client} />
     </div>
   )
 }

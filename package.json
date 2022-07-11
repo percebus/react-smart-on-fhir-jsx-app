@@ -16,7 +16,9 @@
     "test": "exit 0",
     "dev": "npm run parcel:watch",
     "dist": "npm run parcel:build",
-    "start": "serve ./dist -p 3000"
+    "serve:dist": "serve ./dist -p 3000",
+    "prestart": "npm run dist",
+    "start": "npm run serve:dist"
   },
   "repository": {
     "type": "git",
