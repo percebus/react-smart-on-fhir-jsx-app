@@ -1,0 +1,46 @@
+{
+  "name": "react-smart-on-fhir-jsx-app",
+  "version": "0.1.0",
+  "description": "My First SMART on FHIR Application w/ React",
+  "source": "src/index.html",
+  "scripts": {
+    "npm:install:global": "npm install --location=global yarn open-cli",
+    "setup": "npm run npm:install:global",
+    "standard": "standard --fix src/**/*.jsx",
+    "lint:js": "npm run standard",
+    "lint": "npm run lint:js",
+    "preparcel": "npm run lint",
+    "parcel": "parcel",
+    "parcel:watch": "npm run parcel -- watch",
+    "parcel:build": "npm run parcel -- build",
+    "test": "exit 0",
+    "dist": "npm run parcel:build",
+    "start": "npm run parcel:watch"
+   },
+  "repository": {
+    "type": "git",
+    "url": "git+git@github.com:percebus/react-smart-on-fhir-jsx-app.git"
+  },
+  "keywords": [
+    "hello-world",
+    "parcel",
+    "react",
+    "html",
+    "web"
+  ],
+  "author": "percebus",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/percebus/react-smart-on-fhir-jsx-app/issues"
+  },
+  "homepage": "https://github.com/percebus/react-smart-on-fhir-jsx-app",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "parcel": "latest",
+    "process": "^0.11.10",
+    "standard": "latest"
+  }
+}
